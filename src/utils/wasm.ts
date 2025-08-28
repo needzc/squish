@@ -27,6 +27,6 @@ export async function ensureWasmLoaded(format: OutputType): Promise<void> {
     wasmInitialized.set(format, true);
   } catch (error) {
     console.error(`Failed to initialize WASM for ${format}:`, error);
-    throw new Error(`Failed to initialize ${format} support`);
+    throw new Error(`初始化支持 ${format} 失败`);
   }
 }
