@@ -32,21 +32,21 @@ export function useImageQueue(
       const sourceType = getFileType(image.file);
       
       if (!fileBuffer.byteLength) {
-        throw new Error('Empty file');
+        throw new Error('空文件');
       }
 
       // Decode the image
       const imageData = await decode(sourceType, fileBuffer);
       
       if (!imageData || !imageData.width || !imageData.height) {
-        throw new Error('Invalid image data');
+        throw new Error('图像数据无效');
       }
 
       // Encode to the target format
       const compressedBuffer = await encode(outputType, imageData, options);
       
       if (!compressedBuffer.byteLength) {
-        throw new Error('Failed to compress image');
+        throw new Error('压缩图像失败');
       }
 
       const blob = new Blob([compressedBuffer], { type: `image/${outputType}` });
@@ -67,7 +67,7 @@ export function useImageQueue(
         )
       );
     } catch (error) {
-      console.error('Error processing image:', error);
+      console.error('处理图像时出错:', error);
       setImages((prev) =>
         prev.map((img) =>
           img.id === image.id
@@ -76,7 +76,7 @@ export function useImageQueue(
                 status: 'error' as const,
                 error: error instanceof Error 
                   ? error.message 
-                  : 'Failed to process image',
+                  : '图像处理失败',
               }
             : img
         )
