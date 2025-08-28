@@ -25,11 +25,11 @@ export async function decode(sourceType: string, fileBuffer: ArrayBuffer): Promi
       case 'webp':
         return await webp.decode(fileBuffer);
       default:
-        throw new Error(`Unsupported source type: ${sourceType}`);
+        throw new Error(`不支持的数据类型: ${sourceType}`);
     }
   } catch (error) {
-    console.error(`Failed to decode ${sourceType} image:`, error);
-    throw new Error(`Failed to decode ${sourceType} image`);
+    console.error(`解码失败 ${sourceType} image:`, error);
+    throw new Error(`解码失败 ${sourceType} image`);
   }
 }
 
@@ -67,11 +67,11 @@ export async function encode(outputType: OutputType, imageData: ImageData, optio
         return await webp.encode(imageData, webpOptions as any);
       }
       default:
-        throw new Error(`Unsupported output type: ${outputType}`);
+        throw new Error(`不支持的输出类型: ${outputType}`);
     }
   } catch (error) {
     console.error(`Failed to encode to ${outputType}:`, error);
-    throw new Error(`Failed to encode to ${outputType}`);
+    throw new Error(`编码到 ${outputType}失败`);
   }
 }
 
