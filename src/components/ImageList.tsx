@@ -52,18 +52,18 @@ export function ImageList({ images, onRemove }: ImageListProps) {
             </div>
             <div className="mt-1 flex items-center gap-2 text-sm text-gray-500">
               {image.status === 'pending' && (
-                <span>Ready to process</span>
+                <span>准备处理</span>
               )}
               {image.status === 'processing' && (
                 <span className="flex items-center gap-2">
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  Processing...
+                  处理中...
                 </span>
               )}
               {image.status === 'complete' && (
                 <span className="flex items-center gap-2 text-green-600">
                   <CheckCircle className="w-4 h-4" />
-                  Complete
+                  完成
                 </span>
               )}
               {image.status === 'error' && (
@@ -86,7 +86,7 @@ export function ImageList({ images, onRemove }: ImageListProps) {
                         image.originalSize) *
                         100
                     )}
-                    % smaller)
+                    % 减少)
                   </span>
                 </>
               )}
