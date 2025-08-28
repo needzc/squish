@@ -18,7 +18,7 @@ export function CompressionOptions({
     <div className="space-y-6 bg-white p-6 rounded-lg shadow-sm">
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Output Format
+          输出格式
         </label>
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
           {(['avif', 'jpeg', 'jxl', 'png', 'webp'] as const).map((format) => (
@@ -40,7 +40,7 @@ export function CompressionOptions({
       {outputType !== 'png' && (
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Quality: {options.quality}%
+            压缩质量: {options.quality}%
           </label>
           <input
             type="range"
