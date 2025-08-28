@@ -78,10 +78,10 @@ export function App() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Image className="w-8 h-8 text-blue-500" />
-            <h1 className="text-3xl font-bold text-gray-900">Squish</h1>
+            <h1 className="text-3xl font-bold text-gray-900">智诚图片压缩工具</h1>
           </div>
           <p className="text-gray-600">
-            Compress and convert your images to AVIF, JPEG, JPEG XL, PNG, or WebP
+            将图像压缩并转换为 AVIF、JPEG、JPEG XL、PNG 或 WebP
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export function App() {
               className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
             >
               <Trash2 className="w-5 h-5" />
-              Clear All
+              全部清除
             </button>
           )}
         </div>
