@@ -78,7 +78,7 @@ export function App() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Image className="w-8 h-8 text-blue-500" />
-            <h1 className="text-3xl font-bold text-gray-900">智诚图片压缩工具</h1>
+            <h1 className="text-3xl font-bold text-gray-900">智诚图片在线压缩</h1>
           </div>
           <p className="text-gray-600">
             将图像压缩并转换为 AVIF、JPEG、JPEG XL、PNG 或 WebP
